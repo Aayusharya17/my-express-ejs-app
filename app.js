@@ -23,11 +23,11 @@ connectDB();
 
 
 app.use(express.urlencoded({ extended: true }));
-const loginLimiter = rateLimit({
-  windowMs: 15 * 60 * 1000, // 15 minutes
-  max: 5,
-  message: "Too many login attempts. Please try again later."
-});
+// const loginLimiter = rateLimit({
+//   windowMs: 15 * 60 * 1000, 
+//   max: 5,
+//   message: "Too many login attempts. Please try again later."
+// });
 app.use('/login', loginLimiter);
 
 app.engine("ejs", ejsMate);
