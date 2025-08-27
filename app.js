@@ -12,7 +12,7 @@ require('dotenv').config();
 const PORT =process.env.PORT_NAME || 3000;
 async function connectDB() {
   try {
-    await mongoose.connect("mongodb+srv://AayushArya:NbIQOKYauMM54C09@cluster0.cifs5zy.mongodb.net/CyberSecurity?retryWrites=true&w=majority&appName=Cluster0");
+    await mongoose.connect(process.env.DB_URL);
     console.log(" Database connected successfully");
   } catch (err) {
     console.error(" Database connection failed:", err);
