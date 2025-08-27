@@ -47,7 +47,7 @@ app.get('/signup', (req, res) => {
 
 //<----------- Helmet - secure against web attacks like XSS (Cross-Site Scripting), Clickjacking, and Content Sniffing.
 
-app.use(helmet());
+// app.use(helmet());
 
 app.post('/signup',
   [
