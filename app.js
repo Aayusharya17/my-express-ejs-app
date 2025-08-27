@@ -28,7 +28,7 @@ app.use(express.urlencoded({ extended: true }));
 //   max: 5,
 //   message: "Too many login attempts. Please try again later."
 // });
-app.use('/login', loginLimiter);
+// app.use('/login', loginLimiter);
 
 app.engine("ejs", ejsMate);
 app.set("view engine", "ejs");
