@@ -35,11 +35,11 @@ app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 
 app.get('/', (req, res) => {
-  res.render('home');
+  res.render('home.ejs');
 });
 
 app.get('/signup', (req, res) => {
-  res.render('signup',{
+  res.render('signup.ejs',{
                       err:null,
                       old:null
                     });
@@ -102,7 +102,7 @@ app.post('/signup',
 });
 
 app.get('/login', (req, res) => {
-  res.render('login');
+  res.render('login.ejs');
 });
 
 app.post('/login', async (req, res) => {
