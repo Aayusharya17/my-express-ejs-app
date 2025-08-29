@@ -23,6 +23,7 @@ connectDB();
 
 
 app.use(express.urlencoded({ extended: true }));
+app.set("trust proxy", 1);
 const loginLimiter = rateLimit({
   windowMs: 1 * 60 * 1000, 
   max: 5,
